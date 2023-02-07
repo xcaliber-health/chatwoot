@@ -105,7 +105,7 @@
       "CLICK_HERE": "Click here to update"
     },
     "REPLYBOX": {
-      "REPLY": "Reply",
+      "REPLY": "Comment",
       "PRIVATE_NOTE": "Private Note",
       "SEND": "Send",
       "CREATE": "Add Note",
@@ -209,9 +209,9 @@
     },
     "ACCORDION": {
       "CONTACT_DETAILS": "Contact Details",
-      "CONVERSATION_ACTIONS": "Conversation Actions",
+      "CONVERSATION_ACTIONS": "Case Actions",
       "CONVERSATION_LABELS": "Етикети на разговора",
-      "CONVERSATION_INFO": "Conversation Information",
+      "CONVERSATION_INFO": "Case Information",
       "CONTACT_ATTRIBUTES": "Contact Attributes",
       "PREVIOUS_CONVERSATION": "Предишни разговори",
       "MACROS": "Macros"

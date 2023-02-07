@@ -66,10 +66,6 @@
             :class="{ 'is-active': isActive }"
             @click="e => newLinkClick(e, navigate)"
           >
-            <fluent-icon icon="add" size="16" />
-            <span class="button__content">
-              {{ $t(`SIDEBAR.${menuItem.newLinkTag}`) }}
-            </span>
           </a>
         </li>
       </router-link>

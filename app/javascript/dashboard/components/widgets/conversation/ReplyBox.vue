@@ -768,7 +768,7 @@ export default {
         this.message = updatedMessage;
       }, 100);
     },
-    setReplyMode(mode = REPLY_EDITOR_MODES.REPLY) {
+    setReplyMode(mode = REPLY_EDITOR_MODES.NOTE) {
       const { can_reply: canReply } = this.currentChat;
       if (canReply || this.isAWhatsAppChannel) this.replyType = mode;
       if (this.showRichContentEditor) {

@@ -1,11 +1,5 @@
 <template>
   <div class="medium-3 bg-white contact--panel">
-    <woot-button
-      icon="chevron-right"
-      class="close-button clear secondary"
-      @click="onPanelToggle"
-    />
-    <contact-info :contact="contact" :channel-type="channelType" />
     <draggable
       :list="conversationSidebarItems"
       :disabled="!dragEnabled"
@@ -22,8 +16,23 @@
           :key="element.name"
           class="list-group-item"
         >
+          <div v-if="element.name === 'conversation_info'">
+            <accordion-item
+              :title="$t('CONVERSATION_SIDEBAR.ACCORDION.CONVERSATION_INFO')"
+              :is-open="isContactSidebarItemOpen('is_conv_details_open')"
+              compact
+              @click="
+                value => toggleSidebarUIState('is_conv_details_open', value)
+              "
+            >
+              <conversation-info
+                :conversation-attributes="conversationAdditionalAttributes"
+                :contact-attributes="contactAdditionalAttributes"
+              />
+            </accordion-item>
+          </div>
           <div
-            v-if="element.name === 'conversation_actions'"
+            v-else-if="element.name === 'conversation_actions'"
             class="conversation--actions"
           >
             <accordion-item
@@ -39,73 +48,6 @@
               />
             </accordion-item>
           </div>
-          <div v-else-if="element.name === 'conversation_info'">
-            <accordion-item
-              :title="$t('CONVERSATION_SIDEBAR.ACCORDION.CONVERSATION_INFO')"
-              :is-open="isContactSidebarItemOpen('is_conv_details_open')"
-              compact
-              @click="
-                value => toggleSidebarUIState('is_conv_details_open', value)
-              "
-            >
-              <conversation-info
-                :conversation-attributes="conversationAdditionalAttributes"
-                :contact-attributes="contactAdditionalAttributes"
-              />
-            </accordion-item>
-          </div>
-          <div v-else-if="element.name === 'contact_attributes'">
-            <accordion-item
-              :title="$t('CONVERSATION_SIDEBAR.ACCORDION.CONTACT_ATTRIBUTES')"
-              :is-open="isContactSidebarItemOpen('is_contact_attributes_open')"
-              compact
-              @click="
-                value =>
-                  toggleSidebarUIState('is_contact_attributes_open', value)
-              "
-            >
-              <custom-attributes
-                attribute-type="contact_attribute"
-                attribute-class="conversation--attribute"
-                class="even"
-                :contact-id="contact.id"
-              />
-              <custom-attribute-selector
-                attribute-type="contact_attribute"
-                :contact-id="contact.id"
-              />
-            </accordion-item>
-          </div>
-          <div v-else-if="element.name === 'previous_conversation'">
-            <accordion-item
-              v-if="contact.id"
-              :title="
-                $t('CONVERSATION_SIDEBAR.ACCORDION.PREVIOUS_CONVERSATION')
-              "
-              :is-open="isContactSidebarItemOpen('is_previous_conv_open')"
-              @click="
-                value => toggleSidebarUIState('is_previous_conv_open', value)
-              "
-            >
-              <contact-conversations
-                :contact-id="contact.id"
-                :conversation-id="conversationId"
-              />
-            </accordion-item>
-          </div>
-          <woot-feature-toggle
-            v-else-if="element.name === 'macros'"
-            feature-key="macros"
-          >
-            <accordion-item
-              :title="$t('CONVERSATION_SIDEBAR.ACCORDION.MACROS')"
-              :is-open="isContactSidebarItemOpen('is_macro_open')"
-              compact
-              @click="value => toggleSidebarUIState('is_macro_open', value)"
-            >
-              <macros-list :conversation-id="conversationId" />
-            </accordion-item>
-          </woot-feature-toggle>
         </div>
       </transition-group>
     </draggable>

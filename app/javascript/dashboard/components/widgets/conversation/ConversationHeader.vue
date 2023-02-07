@@ -11,7 +11,9 @@
         />
         <div class="user--profile__meta">
           <h3 class="user--name text-truncate">
-            <span class="margin-right-smaller">{{ currentContact.name }}</span>
+            <span class="margin-right-smaller"
+              >Case Id: {{ currentChat.id }}</span
+            >
             <fluent-icon
               v-if="!isHMACVerified"
               v-tooltip="$t('CONVERSATION.UNVERIFIED_SESSION')"
