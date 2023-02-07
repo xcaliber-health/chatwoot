@@ -4,7 +4,7 @@ export const CMD_SWITCH_TAB = 'CMD_SWITCH_TAB';
 // General Actions - Switch conversation status
 export const CMD_SWITCH_STATUS = 'CMD_SWITCH_STATUS';
 
-// Conversation Actions
+// Case Actions
 export const CMD_MUTE_CONVERSATION = 'CMD_MUTE_CONVERSATION';
 export const CMD_UNMUTE_CONVERSATION = 'CMD_UNMUTE_CONVERSATION';
 export const CMD_SEND_TRANSCRIPT = 'CMD_SEND_TRANSCRIPT';

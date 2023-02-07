@@ -17,7 +17,7 @@
 #To learn more, please read the Rails Internationalization guide
 #available at https://guides.rubyonrails.org/i18n.html.
 sk:
-  hello: "Hello world"
+  hello: 'Hello world'
   messages:
     reset_password_success: Woot! Request for password reset is successful. Check your mail for instructions.
     reset_password_failure: Uh ho! We could not find any user with the specified email.
@@ -29,7 +29,7 @@ sk:
     signup:
       disposable_email: We do not allow disposable emails
       invalid_email: You have entered an invalid email
-      email_already_exists: "You have already signed up for an account with %{email}"
+      email_already_exists: 'You have already signed up for an account with %{email}'
       failed: Signup failed
     data_import:
       data_type:
@@ -45,7 +45,7 @@ sk:
       locale:
         unique: should be unique in the category and portal
     dyte:
-      invalid_message_type: "Invalid message type. Action not permitted"
+      invalid_message_type: 'Invalid message type. Action not permitted'
     inboxes:
       imap:
         socket_error: Please check the network connection, IMAP address and try again.
@@ -91,70 +91,70 @@ sk:
         recorded_at: Recorded date
   notifications:
     notification_title:
-      conversation_creation: "[New conversation] - #%{display_id} has been created in %{inbox_name}"
-      conversation_assignment: "[Assigned to you] - #%{display_id} has been assigned to you"
-      assigned_conversation_new_message: "[New message] - #%{display_id} %{content}"
-      conversation_mention: "You have been mentioned in conversation [ID - %{display_id}] by %{name}"
+      conversation_creation: '[New conversation] - #%{display_id} has been created in %{inbox_name}'
+      conversation_assignment: '[Assigned to you] - #%{display_id} has been assigned to you'
+      assigned_conversation_new_message: '[New message] - #%{display_id} %{content}'
+      conversation_mention: 'You have been mentioned in conversation [ID - %{display_id}] by %{name}'
   conversations:
     messages:
-      instagram_story_content: "%{story_sender} mentioned you in the story: "
+      instagram_story_content: '%{story_sender} mentioned you in the story: '
       instagram_deleted_story_content: This story is no longer available.
       deleted: This message was deleted
     activity:
       status:
-        resolved: "Conversation was marked resolved by %{user_name}"
-        contact_resolved: "Conversation was resolved by %{contact_name}"
-        open: "Conversation was reopened by %{user_name}"
-        pending: "Conversation was marked as pending by %{user_name}"
-        snoozed: "Conversation was snoozed by %{user_name}"
-        auto_resolved: "Conversation was marked resolved by system due to %{duration} days of inactivity"
+        resolved: 'Conversation was marked resolved by %{user_name}'
+        contact_resolved: 'Conversation was resolved by %{contact_name}'
+        open: 'Conversation was reopened by %{user_name}'
+        pending: 'Conversation was marked as pending by %{user_name}'
+        snoozed: 'Conversation was snoozed by %{user_name}'
+        auto_resolved: 'Conversation was marked resolved by system due to %{duration} days of inactivity'
       assignee:
-        self_assigned: "%{user_name} self-assigned this conversation"
-        assigned: "Pridelené %{assignee_name} od %{user_name}"
-        removed: "Konverzácia nepriradená %{user_name}"
+        self_assigned: '%{user_name} self-assigned this case'
+        assigned: 'Pridelené %{assignee_name} od %{user_name}'
+        removed: 'Konverzácia nepriradená %{user_name}'
       team:
-        assigned: "Pridelené %{team_name} od %{user_name}"
-        assigned_with_assignee: "Pridelené %{assignee_name} prostredníctvom %{team_name} od %{user_name}"
-        removed: "Odpriradené z %{team_name} od %{user_name}"
+        assigned: 'Pridelené %{team_name} od %{user_name}'
+        assigned_with_assignee: 'Pridelené %{assignee_name} prostredníctvom %{team_name} od %{user_name}'
+        removed: 'Odpriradené z %{team_name} od %{user_name}'
       labels:
-        added: "%{user_name} pridal %{labels}"
-        removed: "%{user_name} odobral %{labels}"
-      muted: "%{user_name} stlmil konverzáciu"
-      unmuted: "%{user_name} odtlmil konverzáciu"
+        added: '%{user_name} pridal %{labels}'
+        removed: '%{user_name} odobral %{labels}'
+      muted: '%{user_name} stlmil konverzáciu'
+      unmuted: '%{user_name} odtlmil konverzáciu'
     templates:
-      greeting_message_body: "%{account_name} zvyčajne odpovedá do niekoľkých hodín."
-      ways_to_reach_you_message_body: "Poskytnite tímu spôsob, ako sa s vami spojiť."
-      email_input_box_message_body: "Dostať upozornenie e-mailom"
-      csat_input_message_body: "Prosím, ohodnoťte konverzáciu"
+      greeting_message_body: '%{account_name} zvyčajne odpovedá do niekoľkých hodín.'
+      ways_to_reach_you_message_body: 'Poskytnite tímu spôsob, ako sa s vami spojiť.'
+      email_input_box_message_body: 'Dostať upozornenie e-mailom'
+      csat_input_message_body: 'Prosím, ohodnoťte konverzáciu'
     reply:
       email:
         header:
           from_with_name: '%{assignee_name} z %{inbox_name} <reply+%{from_email}>'
           reply_with_name: '%{assignee_name} z %{inbox_name} <reply+%{reply_email}>'
-      email_subject: "Nové správy v tejto konverzácii"
-      transcript_subject: "Prepis konverzácie"
+      email_subject: 'Nové správy v tejto konverzácii'
+      transcript_subject: 'Prepis konverzácie'
     survey:
-      response: "Prosím, ohodnoťte túto konverzáciu, %{link}"
+      response: 'Prosím, ohodnoťte túto konverzáciu, %{link}'
   contacts:
     online:
-      delete: "%{contact_name} je online, skúste to prosím neskôr"
+      delete: '%{contact_name} je online, skúste to prosím neskôr'
   integration_apps:
     dyte:
-      name: "Dyte"
-      description: "Dyte is tool that helps you to add live audio & video to your application with just a few lines of code. This integration allows you to give an option to your agents to have a video or voice call with your customers from without leaving Chatwoot."
-      meeting_name: "%{agent_name} has started a meeting"
+      name: 'Dyte'
+      description: 'Dyte is tool that helps you to add live audio & video to your application with just a few lines of code. This integration allows you to give an option to your agents to have a video or voice call with your customers from without leaving Chatwoot.'
+      meeting_name: '%{agent_name} has started a meeting'
     slack:
-      name: "Slack"
-      description: "Slack je chatovací nástroj, ktorý spája všetku vašu komunikáciu na jednom mieste. Integráciou služby Slack môžete dostávať upozornenia na všetky nové konverzácie vo vašom účte priamo v službe Slack."
+      name: 'Slack'
+      description: 'Slack je chatovací nástroj, ktorý spája všetku vašu komunikáciu na jednom mieste. Integráciou služby Slack môžete dostávať upozornenia na všetky nové konverzácie vo vašom účte priamo v službe Slack.'
     webhooks:
-      name: "Webhooks"
-      description: "Udalosti Webhook vám poskytujú informácie v reálnom čase o tom, čo sa deje vo vašom účte. Webhook môžete využiť na oznamovanie udalostí svojim obľúbeným aplikáciám, ako je Slack alebo Github. Kliknutím na tlačidlo Konfigurovať nastavte svoje webhooky."
+      name: 'Webhooks'
+      description: 'Udalosti Webhook vám poskytujú informácie v reálnom čase o tom, čo sa deje vo vašom účte. Webhook môžete využiť na oznamovanie udalostí svojim obľúbeným aplikáciám, ako je Slack alebo Github. Kliknutím na tlačidlo Konfigurovať nastavte svoje webhooky.'
     dialogflow:
-      name: "Dialogflow"
-      description: "Vytvorte chatboty pomocou aplikácie Dialogflow a rýchlo ich pripojte k doručenej pošte. Nechajte botov spracovať otázky predtým, ako ich odovzdáte agentovi zákazníckeho servisu."
+      name: 'Dialogflow'
+      description: 'Vytvorte chatboty pomocou aplikácie Dialogflow a rýchlo ich pripojte k doručenej pošte. Nechajte botov spracovať otázky predtým, ako ich odovzdáte agentovi zákazníckeho servisu.'
     fullcontact:
-      name: "Fullcontact"
-      description: "Integrácia so službou FullContact pomáha obohatiť profily návštevníkov. Identifikujte používateľov hneď, ako zdieľajú svoju e-mailovú adresu, a ponúknite im zákaznícky servis šitý na mieru. Pripojte aplikáciu FullContact k svojmu účtu zdieľaním kľúča API FullContact."
+      name: 'Fullcontact'
+      description: 'Integrácia so službou FullContact pomáha obohatiť profily návštevníkov. Identifikujte používateľov hneď, ako zdieľajú svoju e-mailovú adresu, a ponúknite im zákaznícky servis šitý na mieru. Pripojte aplikáciu FullContact k svojmu účtu zdieľaním kľúča API FullContact.'
   public_portal:
     search:
       search_placeholder: Search for article by title or body...

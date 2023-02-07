@@ -2,18 +2,8 @@
   <div class="top-box">
     <div class="mode-wrap button-group">
       <woot-button
-        variant="clear"
-        class="button--reply"
-        :class="replyButtonClass"
-        @click="handleReplyClick"
-      >
-        {{ $t('CONVERSATION.REPLYBOX.REPLY') }}
-      </woot-button>
-
-      <woot-button
         class="button--note"
         variant="clear"
-        color-scheme="warning"
         :class="noteButtonClass"
         @click="handleNoteClick"
       >

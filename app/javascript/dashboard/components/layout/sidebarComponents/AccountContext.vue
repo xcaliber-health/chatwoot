@@ -1,28 +1,5 @@
 <template>
-  <div
-    v-if="showShowCurrentAccountContext"
-    class="account-context--group"
-    @mouseover="setShowSwitch"
-    @mouseleave="resetShowSwitch"
-  >
-    {{ $t('SIDEBAR.CURRENTLY_VIEWING_ACCOUNT') }}
-    <p class="account-context--name text-ellipsis">
-      {{ account.name }}
-    </p>
-    <transition name="fade">
-      <div v-if="showSwitchButton" class="account-context--switch-group">
-        <woot-button
-          variant="clear"
-          size="tiny"
-          icon="arrow-swap"
-          class="switch-button"
-          @click="$emit('toggle-accounts')"
-        >
-          {{ $t('SIDEBAR.SWITCH') }}
-        </woot-button>
-      </div>
-    </transition>
-  </div>
+  <div />
 </template>
 <script>
 import { mapGetters } from 'vuex';

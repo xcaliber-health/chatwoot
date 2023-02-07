@@ -28,20 +28,6 @@ const conversations = accountId => ({
       toolTip: 'Conversation from all subscribed inboxes',
       toStateName: 'home',
     },
-    {
-      icon: 'mention',
-      label: 'MENTIONED_CONVERSATIONS',
-      key: 'conversation_mentions',
-      toState: frontendURL(`accounts/${accountId}/mentions/conversations`),
-      toStateName: 'conversation_mentions',
-    },
-    {
-      icon: 'mail-unread',
-      label: 'UNATTENDED_CONVERSATIONS',
-      key: 'conversation_unattended',
-      toState: frontendURL(`accounts/${accountId}/unattended/conversations`),
-      toStateName: 'conversation_unattended',
-    },
   ],
 });
 

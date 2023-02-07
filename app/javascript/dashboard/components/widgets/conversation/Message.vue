@@ -100,18 +100,7 @@
         />
       </div>
     </div>
-    <div v-if="shouldShowContextMenu" class="context-menu-wrap">
-      <context-menu
-        v-if="isBubble && !isMessageDeleted"
-        :is-open="showContextMenu"
-        :show-copy="hasText"
-        :show-canned-response-option="isOutgoing"
-        :menu-position="contextMenuPosition"
-        :message-content="data.content"
-        @toggle="handleContextMenuClick"
-        @delete="handleDelete"
-      />
-    </div>
+    <div class="context-menu-wrap" />
   </li>
 </template>
 <script>
