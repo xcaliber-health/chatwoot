@@ -44,7 +44,7 @@ function drawSuperAdminDashboard(data) {
       labels: chartData.labels,
       datasets: [
         {
-          label: 'Conversations',
+          label: 'Cases',
           data: chartData.dataSet,
           backgroundColor: '#1f93ff',
         },

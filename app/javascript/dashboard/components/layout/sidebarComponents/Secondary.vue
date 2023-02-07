@@ -117,118 +117,18 @@ export default {
           ),
       };
     },
-    labelSection() {
-      return {
-        icon: 'number-symbol',
-        label: 'LABELS',
-        hasSubMenu: true,
-        newLink: this.showNewLink(FEATURE_FLAGS.TEAM_MANAGEMENT),
-        newLinkTag: 'NEW_LABEL',
-        key: 'label',
-        toState: frontendURL(`accounts/${this.accountId}/settings/labels`),
-        toStateName: 'labels_list',
-        showModalForNewItem: true,
-        modalName: 'AddLabel',
-        children: this.labels.map(label => ({
-          id: label.id,
-          label: label.title,
-          color: label.color,
-          truncateLabel: true,
-          toState: frontendURL(
-            `accounts/${this.accountId}/label/${label.title}`
-          ),
-        })),
-      };
-    },
-    contactLabelSection() {
-      return {
-        icon: 'number-symbol',
-        label: 'TAGGED_WITH',
-        hasSubMenu: true,
-        key: 'label',
-        newLink: this.showNewLink(FEATURE_FLAGS.TEAM_MANAGEMENT),
-        newLinkTag: 'NEW_LABEL',
-        toState: frontendURL(`accounts/${this.accountId}/settings/labels`),
-        toStateName: 'labels_list',
-        showModalForNewItem: true,
-        modalName: 'AddLabel',
-        children: this.labels.map(label => ({
-          id: label.id,
-          label: label.title,
-          color: label.color,
-          truncateLabel: true,
-          toState: frontendURL(
-            `accounts/${this.accountId}/labels/${label.title}/contacts`
-          ),
-        })),
-      };
-    },
-    teamSection() {
-      return {
-        icon: 'people-team',
-        label: 'TEAMS',
-        hasSubMenu: true,
-        newLink: this.showNewLink(FEATURE_FLAGS.TEAM_MANAGEMENT),
-        newLinkTag: 'NEW_TEAM',
-        key: 'team',
-        toState: frontendURL(`accounts/${this.accountId}/settings/teams/new`),
-        toStateName: 'settings_teams_new',
-        newLinkRouteName: 'settings_teams_new',
-        children: this.teams.map(team => ({
-          id: team.id,
-          label: team.name,
-          truncateLabel: true,
-          toState: frontendURL(`accounts/${this.accountId}/team/${team.id}`),
-        })),
-      };
-    },
-    foldersSection() {
-      return {
-        icon: 'folder',
-        label: 'CUSTOM_VIEWS_FOLDER',
-        hasSubMenu: true,
-        key: 'custom_view',
-        children: this.customViews
-          .filter(view => view.filter_type === 'conversation')
-          .map(view => ({
-            id: view.id,
-            label: view.name,
-            truncateLabel: true,
-            toState: frontendURL(
-              `accounts/${this.accountId}/custom_view/${view.id}`
-            ),
-          })),
-      };
-    },
-    contactSegmentsSection() {
-      return {
-        icon: 'folder',
-        label: 'CUSTOM_VIEWS_SEGMENTS',
-        hasSubMenu: true,
-        key: 'custom_view',
-        children: this.customViews
-          .filter(view => view.filter_type === 'contact')
-          .map(view => ({
-            id: view.id,
-            label: view.name,
-            truncateLabel: true,
-            toState: frontendURL(
-              `accounts/${this.accountId}/contacts/custom_view/${view.id}`
-            ),
-          })),
-      };
-    },
+
     additionalSecondaryMenuItems() {
-      let conversationMenuItems = [this.inboxSection, this.labelSection];
-      let contactMenuItems = [this.contactLabelSection];
+      let conversationMenuItems = [this.inboxSection];
+      let contactMenuItems = [];
       if (this.teams.length) {
-        conversationMenuItems = [this.teamSection, ...conversationMenuItems];
+        conversationMenuItems = [...conversationMenuItems];
       }
       if (this.customViews.length) {
-        conversationMenuItems = [this.foldersSection, ...conversationMenuItems];
+        conversationMenuItems = [...conversationMenuItems];
       }
       if (this.contactCustomViews.length) {
-        contactMenuItems = [this.contactSegmentsSection, ...contactMenuItems];
+        contactMenuItems = [...contactMenuItems];
       }
       return {
         conversations: conversationMenuItems,

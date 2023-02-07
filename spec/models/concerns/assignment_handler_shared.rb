@@ -94,7 +94,7 @@ shared_examples_for 'assignment_handler' do
         expect(update_assignee).to be(true)
         expect(Conversations::ActivityMessageJob).to(have_been_enqueued.at_least(:once)
           .with(conversation, { account_id: conversation.account_id, inbox_id: conversation.inbox_id,
-                                message_type: :activity, content: "#{agent.name} self-assigned this conversation" }))
+                                message_type: :activity, content: "#{agent.name} self-assigned this case" }))
       end
     end
   end

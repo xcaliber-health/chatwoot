@@ -113,6 +113,7 @@
         @delete="handleDelete"
       />
     </div>
+    <div class="context-menu-wrap" />
   </li>
 </template>
 <script>

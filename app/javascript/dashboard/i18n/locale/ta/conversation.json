@@ -209,9 +209,9 @@
     },
     "ACCORDION": {
       "CONTACT_DETAILS": "Contact Details",
-      "CONVERSATION_ACTIONS": "Conversation Actions",
+      "CONVERSATION_ACTIONS": "Case Actions",
       "CONVERSATION_LABELS": "உரையாடல் லேபிள்கள்",
-      "CONVERSATION_INFO": "Conversation Information",
+      "CONVERSATION_INFO": "Case Information",
       "CONTACT_ATTRIBUTES": "Contact Attributes",
       "PREVIOUS_CONVERSATION": "முந்தைய உரையாடல்கள்",
       "MACROS": "Macros"
